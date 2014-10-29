@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qXa-LC-hKD">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="cix-OT-LiI">
+            <objects>
+                <navigationController id="qXa-LC-hKD" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vc8-7B-P84">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="F28-8s-rdw" kind="relationship" relationship="rootViewController" id="HLg-7f-IG3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rIk-Yi-1xc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-326" y="316"/>
+        </scene>
+        <!--Select photo-->
+        <scene sceneID="pdm-gb-lmY">
+            <objects>
+                <collectionViewController id="F28-8s-rdw" customClass="CollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Jkv-IF-PDN">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <gestureRecognizers/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="23L-hK-fj1">
+                            <size key="itemSize" width="400" height="462.5"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="Cell" id="xxB-SM-jMd" customClass="FilteredImageCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="462.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYc-HW-Fd1">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="258" id="6Ds-Fj-uRh"/>
+                                                <constraint firstAttribute="height" constant="21" id="eVQ-D8-Hv3"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="6Ds-Fj-uRh"/>
+                                                    <exclude reference="eVQ-D8-Hv3"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="6Ds-Fj-uRh"/>
+                                                    <include reference="eVQ-D8-Hv3"/>
+                                                </mask>
+                                            </variation>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gIa-0x-Cwl">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="0.0" y="38" width="400" height="400"/>
+                                            </variation>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="DYc-HW-Fd1" secondAttribute="centerY" constant="204.75" id="Uk6-59-sja"/>
+                                    <constraint firstItem="DYc-HW-Fd1" firstAttribute="leading" secondItem="xxB-SM-jMd" secondAttribute="leadingMargin" constant="65" id="u6O-MG-6CI"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="DYc-HW-Fd1"/>
+                                        <exclude reference="gIa-0x-Cwl"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="Uk6-59-sja"/>
+                                        <exclude reference="u6O-MG-6CI"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="DYc-HW-Fd1"/>
+                                        <include reference="gIa-0x-Cwl"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="Uk6-59-sja"/>
+                                        <include reference="u6O-MG-6CI"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="imageView" destination="gIa-0x-Cwl" id="2B9-VO-0gb"/>
+                                    <outlet property="lblTitle" destination="DYc-HW-Fd1" id="0cE-hi-wCR"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="F28-8s-rdw" id="WpV-nV-08v"/>
+                            <outlet property="delegate" destination="F28-8s-rdw" id="0XL-TC-qWG"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Select photo" id="66M-Ao-a6o">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="Fcm-UD-e6g">
+                            <connections>
+                                <action selector="selectPhoto:" destination="F28-8s-rdw" id="pS5-Ty-T4a"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnSelect" destination="Fcm-UD-e6g" id="0Sp-my-btX"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5T-9U-odZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391.5" y="243"/>
+        </scene>
+    </scenes>
+</document>
